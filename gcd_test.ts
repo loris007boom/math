@@ -12,12 +12,14 @@ const gcdTests = [
 
 Deno.test("gcdBruteForce returns correct gcd", () => {
   for (const { a, b, gcd } of gcdTests) {
-    assertEquals(gcdBruteForce(a, b), gcd);
+    const actual = gcdBruteForce(a, b);
+    assertEquals(actual, gcd);
   }
 });
 
 Deno.test("gcdEuclid returns correct gcd", () => {
   for (const { a, b, gcd } of gcdTests) {
-    assertEquals(gcdEuclid(a, b), gcd);
+    const actual = gcdEuclid(a, b);
+    assertEquals(actual, gcd);
   }
 });
